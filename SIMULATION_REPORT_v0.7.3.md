@@ -71,10 +71,26 @@ Definitions:
 
 ## Results
 
-See:
+Detailed results in:
 
-    outputs/adversary_comparison.csv
-    outputs/adversary_comparison.json
+- `outputs/adversary_comparison.csv` — CSV summary table
+- `outputs/adversary_comparison.json` — full JSON results with compromised node lists
+
+Summary table below.
+
+## Summary table
+
+| Seed | Policy | Path Count | Clean Path Ratio | Mean Compromised Nodes/Path |
+|---|---|---:|---:|---:|
+| run-001 | WHISPER | 3 | 0.00 | 3.67 |
+| run-001 | single-path | 3 | 0.00 | 1.00 |
+| run-001 | random-multipath | 3 | 0.00 | 4.33 |
+| run-002 | WHISPER | 3 | 0.33 | 3.00 |
+| run-002 | single-path | 3 | 1.00 | 0.00 |
+| run-002 | random-multipath | 3 | 1.00 | 0.00 |
+| run-003 | WHISPER | 3 | 0.00 | 1.00 |
+| run-003 | single-path | 3 | 0.00 | 1.00 |
+| run-003 | random-multipath | 3 | 0.00 | 2.00 |
 
 ## Observed results
 

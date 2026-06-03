@@ -46,5 +46,5 @@ def test_baseline_output_files_exist_after_script_run():
 
     data = json.loads(Path("outputs/baseline_comparison.json").read_text())
 
-    assert data["schema_version"] == "0.7.0"
+    assert data["schema_version"] == "0.7.2"
     assert len(data["comparisons"]) >= 3
