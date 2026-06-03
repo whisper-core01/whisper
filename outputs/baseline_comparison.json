@@ -1,0 +1,83 @@
+{
+  "comparisons": [
+    {
+      "comparison": [
+        {
+          "path_count": 3,
+          "path_overlap": 0.1984126984126984,
+          "policy": "whisper_candidate_paths",
+          "unique_path_ratio": 1.0
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 1.0,
+          "policy": "single_path",
+          "unique_path_ratio": 0.3333333333333333
+        }
+      ],
+      "experiment_id": "example-v050",
+      "limitations": [
+        "baseline comparison is preliminary",
+        "single_path is intentionally minimal",
+        "no adversary model",
+        "no statistical significance claim",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.0",
+      "seed": "run-001"
+    },
+    {
+      "comparison": [
+        {
+          "path_count": 3,
+          "path_overlap": 0.19999999999999998,
+          "policy": "whisper_candidate_paths",
+          "unique_path_ratio": 1.0
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 1.0,
+          "policy": "single_path",
+          "unique_path_ratio": 0.3333333333333333
+        }
+      ],
+      "experiment_id": "example-v050",
+      "limitations": [
+        "baseline comparison is preliminary",
+        "single_path is intentionally minimal",
+        "no adversary model",
+        "no statistical significance claim",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.0",
+      "seed": "run-002"
+    },
+    {
+      "comparison": [
+        {
+          "path_count": 3,
+          "path_overlap": 0.1414141414141414,
+          "policy": "whisper_candidate_paths",
+          "unique_path_ratio": 1.0
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 1.0,
+          "policy": "single_path",
+          "unique_path_ratio": 0.3333333333333333
+        }
+      ],
+      "experiment_id": "example-v050",
+      "limitations": [
+        "baseline comparison is preliminary",
+        "single_path is intentionally minimal",
+        "no adversary model",
+        "no statistical significance claim",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.0",
+      "seed": "run-003"
+    }
+  ],
+  "schema_version": "0.7.0"
+}
