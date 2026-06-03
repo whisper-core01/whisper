@@ -52,13 +52,14 @@ It is asking funders to support a falsifiable research program.
 | v0.7.3 | Random node compromise exposure metrics |
 | v0.7.4 | Test/report cleanup |
 | v0.8.0 | State-to-path and lane-collapse diagnostics |
+| v0.9.0 | State-aware path selection experiment |
 
 ## Test Status
 
 Current test suite:
 
 ```text
-125 passed
+132 passed
 
 Coverage includes:
 
