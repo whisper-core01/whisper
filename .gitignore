@@ -10,7 +10,6 @@ build/
 
 # WIP Phase 2/3 — not yet for public review
 src/
-schemas/
 blueprint/
 data/
 assets/
