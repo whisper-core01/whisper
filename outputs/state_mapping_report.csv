@@ -1,0 +1,4 @@
+seed,policy,original_route_count,analysis_route_count,path_count,state_to_path_correlation,lane_collapse_rate
+run-001,whisper_structural_divergence,3,6,6,0.023896897956713233,0.0
+run-002,whisper_structural_divergence,3,6,6,0.2928099729886054,0.0
+run-003,whisper_structural_divergence,3,6,6,0.03306971521400172,0.0

@@ -1,0 +1,610 @@
+{
+  "analyses": [
+    {
+      "analysis_route_count": 6,
+      "lane_collapse_rate": 0.0,
+      "limitations": [
+        "state material does not yet influence path selection",
+        "state-to-path correlation is diagnostic only",
+        "lane collapse uses edge-distance threshold",
+        "no security or resilience claim"
+      ],
+      "original_route_count": 3,
+      "pairwise": [
+        {
+          "i": 0,
+          "j": 1,
+          "path_distance": 1.0,
+          "state_distance": 0.45703125
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "path_distance": 1.0,
+          "state_distance": 0.51171875
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "path_distance": 1.0,
+          "state_distance": 0.49609375
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.515625
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.46875
+        },
+        {
+          "i": 1,
+          "j": 2,
+          "path_distance": 0.9130434782608696,
+          "state_distance": 0.46875
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "path_distance": 0.9,
+          "state_distance": 0.4453125
+        },
+        {
+          "i": 1,
+          "j": 4,
+          "path_distance": 0.9565217391304348,
+          "state_distance": 0.52734375
+        },
+        {
+          "i": 1,
+          "j": 5,
+          "path_distance": 0.96,
+          "state_distance": 0.48828125
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "path_distance": 0.96,
+          "state_distance": 0.53125
+        },
+        {
+          "i": 2,
+          "j": 4,
+          "path_distance": 0.9459459459459459,
+          "state_distance": 0.50390625
+        },
+        {
+          "i": 2,
+          "j": 5,
+          "path_distance": 0.8918918918918919,
+          "state_distance": 0.50390625
+        },
+        {
+          "i": 3,
+          "j": 4,
+          "path_distance": 0.8636363636363636,
+          "state_distance": 0.51171875
+        },
+        {
+          "i": 3,
+          "j": 5,
+          "path_distance": 0.9615384615384616,
+          "state_distance": 0.53515625
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "path_distance": 0.9189189189189189,
+          "state_distance": 0.515625
+        }
+      ],
+      "path_count": 6,
+      "paths": [
+        [
+          "n75",
+          "n10",
+          "n23",
+          "n44",
+          "n76"
+        ],
+        [
+          "n75",
+          "n4",
+          "n36",
+          "n60",
+          "n11",
+          "n76"
+        ],
+        [
+          "n75",
+          "n4",
+          "n33",
+          "n78",
+          "n16",
+          "n59",
+          "n94",
+          "n82",
+          "n56",
+          "n19",
+          "n37",
+          "n54",
+          "n92",
+          "n28",
+          "n3",
+          "n83",
+          "n41",
+          "n10",
+          "n64",
+          "n11",
+          "n76"
+        ],
+        [
+          "n75",
+          "n86",
+          "n69",
+          "n5",
+          "n38",
+          "n11",
+          "n76"
+        ],
+        [
+          "n75",
+          "n83",
+          "n3",
+          "n46",
+          "n2",
+          "n34",
+          "n87",
+          "n47",
+          "n29",
+          "n79",
+          "n98",
+          "n71",
+          "n52",
+          "n6",
+          "n51",
+          "n54",
+          "n5",
+          "n38",
+          "n11",
+          "n76"
+        ],
+        [
+          "n75",
+          "n28",
+          "n53",
+          "n9",
+          "n24",
+          "n35",
+          "n86",
+          "n38",
+          "n67",
+          "n45",
+          "n19",
+          "n37",
+          "n54",
+          "n51",
+          "n49",
+          "n7",
+          "n58",
+          "n3",
+          "n83",
+          "n79",
+          "n11",
+          "n76"
+        ]
+      ],
+      "policy": "whisper_structural_divergence",
+      "schema_version": "0.8.0",
+      "seed": "run-001",
+      "state_to_path_correlation": 0.023896897956713233,
+      "states": [
+        "905aa71056d085129f62250c281380122f2c34b59b74f19217dcfa5ccc15f9d4",
+        "f5f0cef82fea5810b52d30b88ef38194c7887ce73976c2bc763140193529ca87",
+        "ab22b39c211016492d4f3a50baa459984e2777bbac0d92d56c590cfe31475b1f",
+        "31333a7d4aaf4c8eba40435f67a10496e33152cd7853ae60f794747438a8b88b",
+        "154cb59202df920ba6e0c9997a071f8c904591486f5b40359272adcf17598d6a",
+        "cc8881783c6865dac44f3d022c5c5755f44545ebdbffbd31b50774e38d05e652"
+      ]
+    },
+    {
+      "analysis_route_count": 6,
+      "lane_collapse_rate": 0.0,
+      "limitations": [
+        "state material does not yet influence path selection",
+        "state-to-path correlation is diagnostic only",
+        "lane collapse uses edge-distance threshold",
+        "no security or resilience claim"
+      ],
+      "original_route_count": 3,
+      "pairwise": [
+        {
+          "i": 0,
+          "j": 1,
+          "path_distance": 0.962962962962963,
+          "state_distance": 0.55078125
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "path_distance": 1.0,
+          "state_distance": 0.53515625
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "path_distance": 0.9090909090909091,
+          "state_distance": 0.47265625
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.4765625
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.5
+        },
+        {
+          "i": 1,
+          "j": 2,
+          "path_distance": 0.9428571428571428,
+          "state_distance": 0.5078125
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "path_distance": 0.875,
+          "state_distance": 0.5078125
+        },
+        {
+          "i": 1,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.48046875
+        },
+        {
+          "i": 1,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.53515625
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "path_distance": 0.95,
+          "state_distance": 0.484375
+        },
+        {
+          "i": 2,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.49609375
+        },
+        {
+          "i": 2,
+          "j": 5,
+          "path_distance": 0.896551724137931,
+          "state_distance": 0.44921875
+        },
+        {
+          "i": 3,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.49609375
+        },
+        {
+          "i": 3,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.51171875
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "path_distance": 0.9130434782608696,
+          "state_distance": 0.5078125
+        }
+      ],
+      "path_count": 6,
+      "paths": [
+        [
+          "n58",
+          "n76",
+          "n94"
+        ],
+        [
+          "n58",
+          "n2",
+          "n95",
+          "n3",
+          "n66",
+          "n78",
+          "n16",
+          "n8",
+          "n53",
+          "n43",
+          "n98",
+          "n55",
+          "n12",
+          "n46",
+          "n21",
+          "n62",
+          "n33",
+          "n18",
+          "n1",
+          "n99",
+          "n52",
+          "n5",
+          "n90",
+          "n49",
+          "n70",
+          "n76",
+          "n94"
+        ],
+        [
+          "n58",
+          "n95",
+          "n3",
+          "n72",
+          "n36",
+          "n62",
+          "n46",
+          "n12",
+          "n14",
+          "n65",
+          "n27",
+          "n94"
+        ],
+        [
+          "n58",
+          "n2",
+          "n62",
+          "n36",
+          "n41",
+          "n52",
+          "n99",
+          "n90",
+          "n49",
+          "n76",
+          "n94"
+        ],
+        [
+          "n58",
+          "n44",
+          "n45",
+          "n42",
+          "n94"
+        ],
+        [
+          "n58",
+          "n44",
+          "n45",
+          "n30",
+          "n80",
+          "n22",
+          "n75",
+          "n64",
+          "n19",
+          "n66",
+          "n21",
+          "n29",
+          "n93",
+          "n43",
+          "n52",
+          "n15",
+          "n26",
+          "n34",
+          "n14",
+          "n65",
+          "n27",
+          "n94"
+        ]
+      ],
+      "policy": "whisper_structural_divergence",
+      "schema_version": "0.8.0",
+      "seed": "run-002",
+      "state_to_path_correlation": 0.2928099729886054,
+      "states": [
+        "f5d3bacda21bd70a6af117e357cd88d5ebb5f0726e2ff8e269c2e1fae7f891dd",
+        "75e214d37086e99fbd3d792d1c7073313ee71949e0b7978a9693c6fdfb93fe94",
+        "3036dc3cee9256bdfef698a663f5fdba2455e10db103a90c194d5e13f413e33f",
+        "7cc190f1c9d8119897ed2295f28dd83e422fc8b72c4218beb20e35d89c98bab7",
+        "7cae2ea96d90a7eb28df5c5158481fa046bb31b0ce08ef770cc99fc19780d2bc",
+        "d43550fa154d96edc940d4865c84f890615bd70c90db5087396fcbdbdf2445f1"
+      ]
+    },
+    {
+      "analysis_route_count": 6,
+      "lane_collapse_rate": 0.0,
+      "limitations": [
+        "state material does not yet influence path selection",
+        "state-to-path correlation is diagnostic only",
+        "lane collapse uses edge-distance threshold",
+        "no security or resilience claim"
+      ],
+      "original_route_count": 3,
+      "pairwise": [
+        {
+          "i": 0,
+          "j": 1,
+          "path_distance": 0.875,
+          "state_distance": 0.5078125
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "path_distance": 1.0,
+          "state_distance": 0.5078125
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "path_distance": 0.9,
+          "state_distance": 0.484375
+        },
+        {
+          "i": 0,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.453125
+        },
+        {
+          "i": 0,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.44921875
+        },
+        {
+          "i": 1,
+          "j": 2,
+          "path_distance": 1.0,
+          "state_distance": 0.578125
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "path_distance": 1.0,
+          "state_distance": 0.5390625
+        },
+        {
+          "i": 1,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.4765625
+        },
+        {
+          "i": 1,
+          "j": 5,
+          "path_distance": 0.875,
+          "state_distance": 0.51953125
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "path_distance": 1.0,
+          "state_distance": 0.5390625
+        },
+        {
+          "i": 2,
+          "j": 4,
+          "path_distance": 1.0,
+          "state_distance": 0.5546875
+        },
+        {
+          "i": 2,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.48828125
+        },
+        {
+          "i": 3,
+          "j": 4,
+          "path_distance": 0.9655172413793104,
+          "state_distance": 0.4453125
+        },
+        {
+          "i": 3,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.45703125
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "path_distance": 1.0,
+          "state_distance": 0.53515625
+        }
+      ],
+      "path_count": 6,
+      "paths": [
+        [
+          "n63",
+          "n17",
+          "n25",
+          "n41"
+        ],
+        [
+          "n63",
+          "n79",
+          "n20",
+          "n42",
+          "n39",
+          "n25",
+          "n41"
+        ],
+        [
+          "n63",
+          "n27",
+          "n62",
+          "n87",
+          "n2",
+          "n92",
+          "n41"
+        ],
+        [
+          "n63",
+          "n17",
+          "n44",
+          "n39",
+          "n50",
+          "n9",
+          "n10",
+          "n29",
+          "n41"
+        ],
+        [
+          "n63",
+          "n19",
+          "n87",
+          "n13",
+          "n33",
+          "n77",
+          "n56",
+          "n51",
+          "n37",
+          "n49",
+          "n93",
+          "n1",
+          "n90",
+          "n10",
+          "n9",
+          "n6",
+          "n70",
+          "n11",
+          "n47",
+          "n14",
+          "n58",
+          "n52",
+          "n41"
+        ],
+        [
+          "n63",
+          "n79",
+          "n21",
+          "n41"
+        ]
+      ],
+      "policy": "whisper_structural_divergence",
+      "schema_version": "0.8.0",
+      "seed": "run-003",
+      "state_to_path_correlation": 0.03306971521400172,
+      "states": [
+        "efffe7e547ee11b50729d6eb25315a63ed62deee5ba30a4336249a0e9fb1aadc",
+        "bf09a1daa5576143b2f121a7dda042632f2e3f28382ed8e740f6aa3fe08677a9",
+        "54c0071c4b69bb2809cbfb7271e7d7d9e063834b7033429699cd548c0beaf637",
+        "6496eb6274f066506b0df6802db9353407ccd875d0f4495d92525617e24caa97",
+        "0da18e7b83f65ef0bbc6c0de6df9a2793ffbfdf0b2dd097be820ca6eb6986a44",
+        "fcf2ebe06b2a4dd45a89f1d9f7bc7944492a103b5c0c3f0e1db92c7987d9b25b"
+      ]
+    }
+  ],
+  "schema_version": "0.8.0"
+}
