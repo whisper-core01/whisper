@@ -79,3 +79,46 @@ Choose based on expected resume time and environment.
 
 Deferred to v1.1.0.
 v1.0.0 documents design only.
+
+## Addressing the Passphrase SPOF
+
+### Question NLnet/Protocol Labs Will Ask
+"Your Vault LUKS depends on user passphrase. Isn't that a single point of failure?"
+
+### Answer
+
+Yes, a static user passphrase would be a SPOF if it were the only operational unlock mechanism.
+
+WHISPER addresses this by separating **recovery identity** from **operational resume**.
+
+The master passphrase remains the recovery root, but routine post-shutdown or post-defensive-reboot unlock uses event-bound RotorCode Unlock Capsules.
+
+A RotorCode is:
+- Generated only during clean shutdown or defensive reboot
+- One-time use, immediately consumed
+- Expires after TTL (15 min to 24h user-configured)
+- Unlocks only its corresponding temporary capsule
+- Does not persist WHISPER operational state
+- Does not replace the master recovery passphrase
+
+### Result
+
+**What WHISPER eliminates:**
+- Static passphrase as daily operational unlock
+- Persistent key file requiring protection
+- Mandatory TPM or hardware security module
+- Mandatory network service for unlock
+- Opaque auto-unlock mechanisms
+
+**What WHISPER preserves:**
+- Master passphrase as recovery root (offline, rare)
+- Human agency in unlock decision
+- Configurable resume TTL based on context
+- One-time ephemeral capsules as default
+
+### Key Principle
+
+**WHISPER does not remove the need for a recovery passphrase.**
+**WHISPER removes the static passphrase from the routine operational path.**
+
+This is the correct balance: recovery security vs operational ergonomics.
