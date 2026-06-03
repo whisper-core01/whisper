@@ -1,8 +1,0 @@
-feat(week1): add MCE hardening and Loader decision layer
-
-- Add MCEHardened with state validation and coherence checks
-- Add digest_fragment_checked wrapper
-- Add Loader deterministic fragmentation/routing/retry decisions
-- Add pytest coverage for MCEHardened, Loader and integration flow
-- Add benchmarks for hardened MCE and Loader
-- Update README and CHANGELOG for v0.2.0

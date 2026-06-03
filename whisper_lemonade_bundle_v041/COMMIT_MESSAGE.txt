@@ -1,7 +1,0 @@
-fix(lemonade): add stateless scan mode for benchmark correctness
-
-- Add scan_fragment_stateless for per-fragment threat reports
-- Preserve replay memory while restoring global threat state
-- Patch Lemonade benchmark to avoid cumulative threat saturation
-- Add tests for stateless scan behavior
-- Update README and CHANGELOG for v0.4.1

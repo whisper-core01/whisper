@@ -1,6 +1,0 @@
-fix(bench): correct BAL and Dome benchmark methodology
-
-- Replace BAL no-op baseline with indexed direct baseline
-- Report BAL ms/fragment absolute target
-- Fix Dome benchmark double-counting acceptance checks
-- Update README benchmark note and CHANGELOG for v0.3.1

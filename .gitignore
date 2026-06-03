@@ -25,3 +25,10 @@ APPLY_NOTES.md
 PHASE2_VALIDATION_CRITERIA*.md
 SIMULATION_REPORT_v0*.md
 *.txt
+# Rust build artifacts
+target/
+# Python cache
+.pytest_cache/
+# Local bundles / extracted archives
+whisper_*_bundle_*/
+# Local extracted bundles

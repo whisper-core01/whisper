@@ -1,6 +1,6 @@
 # WHISPER Remote Nerve: Architecture & Design Rationale
 
-**Version:** v0.1  
+**Version:** v0.2  
 **Reference implementation:** Whisper Remote Nerve MVP v0.4.3  
 **Status:** Experimental MVP architecture skeleton  
 **Security status:** Not a validated secure communication protocol  
@@ -328,6 +328,62 @@ This is intentional for the MVP but should be refined in Phase 2.
 
 ---
 
+
+
+### 6.7.1 VoxMesh metric limitation
+
+The current VoxMesh divergence score is intentionally simple:
+
+```text
+divergence_score = unique_fractal_states / total_fractals
+```
+
+Because each fractal is initialized with its `fractal_id`, the current MVP starts with maximal state uniqueness:
+
+```text
+divergence_score = 1.0 from initialization
+```
+
+This means the current metric measures **state uniqueness**, not gradual divergence from a shared origin.
+
+This is acceptable for the MVP because VoxMesh currently validates:
+
+```text
+36 independent fractal states exist
+mutation is deterministic
+coherence can be checked
+state uniqueness is preserved
+```
+
+However, this is not sufficient for Phase 2.
+
+A stronger Phase 2 VoxMesh metric should distinguish between:
+
+```text
+initial diversity
+mutation-driven divergence
+topology-driven divergence
+adversary-observed divergence
+```
+
+A Phase 2 simulator should compare at least two initialization modes:
+
+```text
+Mode A — separated initialization:
+  each fractal starts from seed + fractal_id
+
+Mode B — near-shared initialization:
+  fractals start from a common seed with small controlled perturbations
+
+Mode C — shared initialization:
+  all fractals start identical and divergence emerges only through mutation
+```
+
+This matters because a metric that is maximal from the beginning cannot show whether the system becomes more diverse over time. It can only show that the initialized states are unique.
+
+Therefore, the current VoxMesh divergence score must not be treated as evidence of adversarial resilience. It is a placeholder metric for state separation. Phase 2 must refine it into a metric that can measure whether divergence emerges, persists, collapses, or can be simulated by an adversary.
+
+
 ### 6.8 Vault and VaultDisk — metadata persistence
 
 Vault stores metadata in memory. VaultDisk persists it as JSON.
@@ -585,6 +641,192 @@ pipeline throughput
 
 ---
 
+
+
+## 11.1 Structural divergence vs network topology
+
+The current MVP measures mostly **local structural divergence**:
+
+```text
+MCE state evolution
+VoxMesh state uniqueness
+Loader decisions
+BAL lane distribution
+Lemonade anomaly reports
+```
+
+It does not yet measure real network topology diversity.
+
+This is an important gap.
+
+Current BAL lanes are in-memory structures. They are not independent network paths, not Reticulum paths, and not evidence of network-level route diversity.
+
+Therefore, the following claim is not valid for v0.4.3:
+
+```text
+BAL lanes provide real network path diversity.
+```
+
+The valid claim is:
+
+```text
+BAL provides a testable abstraction for lane assignment and ordered reassembly.
+```
+
+Phase 2 must explicitly map local structural divergence to simulated network topology.
+
+The simulator should distinguish at least four layers:
+
+```text
+1. local fragment state divergence
+2. lane assignment divergence
+3. simulated path divergence
+4. adversary-observed metadata divergence
+```
+
+The core Phase 2 research question becomes:
+
+```text
+Does local state divergence produce measurable network-level resilience
+when mapped onto realistic topology constraints?
+```
+
+This requires defining how BAL lanes map to future Reticulum paths:
+
+```text
+lane_id -> candidate path set
+route_count -> number of active path attempts
+Loader decision -> path selection policy
+MCE/VoxMesh state -> path perturbation input
+Lemonade/Dome reports -> degradation input
+```
+
+Without this mapping, structural divergence may remain local and fail to translate into network protection.
+
+Phase 2 must therefore test whether structural divergence survives contact with realistic network constraints such as:
+
+```text
+shared upstream links
+bridge nodes
+hub-and-spoke bottlenecks
+colluding relays
+Sybil-controlled pseudo-paths
+low-noise timing observers
+```
+
+A key failure condition for Phase 2 is:
+
+```text
+If structurally diverse local states still map to correlated network paths,
+then WHISPER does not provide meaningful network-level diversity.
+```
+
+
+
+
+## 11.2 Graceful degradation under node compromise
+
+The phrase "assume compromise" must be operationalized.
+
+In the current MVP, node compromise is not yet implemented as a simulation scenario. The current system does not prevent a compromised node from observing local runtime state, MCE state, fragment contents, metadata, or routing decisions if that node has access to them.
+
+Therefore, the current MVP does not claim protection against compromised hosts.
+
+Phase 2 must define what happens after compromise.
+
+Minimum compromise cases:
+
+```text
+C1 — node sees one fragment
+C2 — node sees one fragment plus metadata
+C3 — node sees current MCE state
+C4 — node sees VoxMesh fractal state
+C5 — node sees Loader route decision
+C6 — node sees Vault metadata
+C7 — node controls a bridge/lane endpoint
+C8 — multiple compromised nodes collude
+```
+
+For each case, Phase 2 must measure whether the adversary can infer:
+
+```text
+future route decisions
+previous route decisions
+fragment ordering
+fragment reconstruction
+state evolution
+lane assignment
+sender/receiver correlation
+```
+
+The intended graceful-degradation property is not:
+
+```text
+a compromised node learns nothing
+```
+
+That would be unrealistic.
+
+The intended property should be weaker and measurable:
+
+```text
+a compromised node should not automatically obtain global reconstruction ability
+from a local observation
+```
+
+Potential degradation mechanisms to evaluate:
+
+```text
+state rotation after anomaly
+route_count increase
+lane exclusion
+fragment re-keying in future crypto layer
+VoxMesh perturbation
+Dome stricter filtering
+Lemonade threat escalation
+Vault quarantine flag
+```
+
+The MVP already has some skeletons that can support degradation experiments:
+
+```text
+MCEHardened detects state anomalies
+Loader can alter route_count/retry policy
+BAL can redistribute fragments
+Dome can reject malformed fragments
+Lemonade can raise threat levels
+Vault can persist anomaly metadata
+```
+
+However, these are not yet connected into a real degradation policy.
+
+Phase 2 should implement and test a degradation loop:
+
+```text
+anomaly or compromise signal
+  -> Lemonade threat escalation
+  -> Loader policy change
+  -> BAL lane redistribution
+  -> MCE/VoxMesh perturbation
+  -> Vault records degradation event
+  -> simulator measures reachability/latency/leakage impact
+```
+
+A practical Phase 2 success criterion:
+
+```text
+Under partial node compromise, WHISPER should degrade reachability or latency
+before allowing full reconstruction or stable metadata correlation.
+```
+
+A practical Phase 2 failure criterion:
+
+```text
+A single compromised node with current state can predict future routing or
+reconstruct enough metadata to defeat structural divergence.
+```
+
+
 ## 12. Baseline comparison plan
 
 WHISPER should be compared against simplified baselines:
@@ -689,7 +931,17 @@ WHISPER Remote Nerve v0.4.3 is a secure or anonymous communication protocol.
 
 ---
 
-## 16. Immediate repository checklist
+## 16. Whitepaper v0.2 changes
+
+This revision explicitly clarifies:
+
+```text
+VoxMesh currently measures state uniqueness, not adversarial topology resilience.
+BAL lanes are local abstractions, not real network paths.
+Assume-compromise requires a Phase 2 graceful-degradation model.
+```
+
+## 17. Immediate repository checklist
 
 Before public grant review, the repository should contain:
 

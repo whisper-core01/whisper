@@ -1,7 +1,0 @@
-feat(final): add Reticulum bridge skeleton and full MVP pipeline
-
-- Add simple ReticulumBridge encapsulation skeleton
-- Add FullPipeline end-to-end integration harness
-- Add tests for bridge and full pipeline
-- Add full pipeline benchmark
-- Add release notes for v0.4.2 final MVP baseline

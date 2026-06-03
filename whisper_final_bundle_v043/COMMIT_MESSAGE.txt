@@ -1,7 +1,0 @@
-test(regression): add deterministic non-regression suite v0.4.3
-
-- Add regression tests for core MVP components
-- Add full pipeline stable summary regression test
-- Add regression benchmark runner
-- Add REGRESSION_TESTS.md
-- Update README and CHANGELOG for v0.4.3
