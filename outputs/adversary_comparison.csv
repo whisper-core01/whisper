@@ -1,0 +1,10 @@
+seed,policy,path_count,compromised_path_count,path_compromise_rate,fully_compromised_count,fully_compromised_path_rate,mean_compromised_nodes_per_path,clean_path_ratio
+run-001,whisper_candidate_paths,3,3,1.0,0,0.0,4.0,0.0
+run-001,single_path,3,3,1.0,0,0.0,1.0,0.0
+run-001,random_multipath,3,3,1.0,0,0.0,6.0,0.0
+run-002,whisper_candidate_paths,3,2,0.6666666666666666,0,0.0,3.0,0.3333333333333333
+run-002,single_path,3,0,0.0,0,0.0,0.0,1.0
+run-002,random_multipath,3,0,0.0,0,0.0,0.0,1.0
+run-003,whisper_candidate_paths,3,3,1.0,0,0.0,2.3333333333333335,0.0
+run-003,single_path,3,3,1.0,0,0.0,1.0,0.0
+run-003,random_multipath,3,3,1.0,0,0.0,1.0,0.0

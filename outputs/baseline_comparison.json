@@ -4,7 +4,7 @@
       "comparison": [
         {
           "path_count": 3,
-          "path_overlap": 0.1984126984126984,
+          "path_overlap": 0.06060606060606061,
           "policy": "whisper_candidate_paths",
           "unique_path_ratio": 1.0
         },
@@ -13,24 +13,31 @@
           "path_overlap": 1.0,
           "policy": "single_path",
           "unique_path_ratio": 0.3333333333333333
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 0.0998217468805704,
+          "policy": "random_multipath",
+          "unique_path_ratio": 1.0
         }
       ],
       "experiment_id": "example-v050",
       "limitations": [
         "baseline comparison is preliminary",
         "single_path is intentionally minimal",
+        "random_multipath is naive and non-adversarial",
         "no adversary model",
         "no statistical significance claim",
         "no security or resilience claim"
       ],
-      "schema_version": "0.7.0",
+      "schema_version": "0.7.2",
       "seed": "run-001"
     },
     {
       "comparison": [
         {
           "path_count": 3,
-          "path_overlap": 0.19999999999999998,
+          "path_overlap": 0.047619047619047616,
           "policy": "whisper_candidate_paths",
           "unique_path_ratio": 1.0
         },
@@ -39,24 +46,31 @@
           "path_overlap": 1.0,
           "policy": "single_path",
           "unique_path_ratio": 0.3333333333333333
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 0.12121212121212122,
+          "policy": "random_multipath",
+          "unique_path_ratio": 1.0
         }
       ],
       "experiment_id": "example-v050",
       "limitations": [
         "baseline comparison is preliminary",
         "single_path is intentionally minimal",
+        "random_multipath is naive and non-adversarial",
         "no adversary model",
         "no statistical significance claim",
         "no security or resilience claim"
       ],
-      "schema_version": "0.7.0",
+      "schema_version": "0.7.2",
       "seed": "run-002"
     },
     {
       "comparison": [
         {
           "path_count": 3,
-          "path_overlap": 0.1414141414141414,
+          "path_overlap": 0.0,
           "policy": "whisper_candidate_paths",
           "unique_path_ratio": 1.0
         },
@@ -65,19 +79,26 @@
           "path_overlap": 1.0,
           "policy": "single_path",
           "unique_path_ratio": 0.3333333333333333
+        },
+        {
+          "path_count": 3,
+          "path_overlap": 0.06666666666666667,
+          "policy": "random_multipath",
+          "unique_path_ratio": 1.0
         }
       ],
       "experiment_id": "example-v050",
       "limitations": [
         "baseline comparison is preliminary",
         "single_path is intentionally minimal",
+        "random_multipath is naive and non-adversarial",
         "no adversary model",
         "no statistical significance claim",
         "no security or resilience claim"
       ],
-      "schema_version": "0.7.0",
+      "schema_version": "0.7.2",
       "seed": "run-003"
     }
   ],
-  "schema_version": "0.7.0"
+  "schema_version": "0.7.2"
 }

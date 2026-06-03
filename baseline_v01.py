@@ -1,16 +1,34 @@
 from __future__ import annotations
 
+import csv
 import json
 from pathlib import Path
 from typing import Any, Dict, List
 
 from metrics_v01 import summarize_paths
-from path_sampler_v01 import shortest_path
+from path_sampler_v01 import random_simple_path, shortest_path
 from simulation_runner_v01 import run_simulation
 from topology_v01 import generate_topology
 
 
 NodePath = List[str]
+
+
+def _common_context(config: Dict[str, Any], seed: str) -> tuple:
+    """
+    Build graph and reuse WHISPER source/target selection.
+
+    This keeps all compared policies on the same topology, seed, source, target,
+    and route_count.
+    """
+    graph = generate_topology(config, seed)
+    whisper_result = run_simulation(config, seed)
+
+    source = whisper_result["source_target"]["source"]
+    target = whisper_result["source_target"]["target"]
+    route_count = int(whisper_result["policy"]["route_count"])
+
+    return graph, whisper_result, source, target, route_count
 
 
 def single_path_baseline(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
@@ -20,12 +38,7 @@ def single_path_baseline(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
     This is not Tor, not I2P, not a mixnet.
     It is a simple baseline to avoid comparing WHISPER to nothing.
     """
-    graph = generate_topology(config, seed)
-
-    whisper_result = run_simulation(config, seed)
-    source = whisper_result["source_target"]["source"]
-    target = whisper_result["source_target"]["target"]
-    route_count = int(whisper_result["policy"]["route_count"])
+    graph, _whisper_result, source, target, route_count = _common_context(config, seed)
 
     path = shortest_path(graph, source, target)
     paths: List[NodePath] = []
@@ -48,12 +61,59 @@ def single_path_baseline(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
     }
 
 
-def compare_whisper_vs_single_path(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
-    whisper = run_simulation(config, seed)
-    baseline = single_path_baseline(config, seed)
+def random_multipath_baseline(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
+    """
+    Naive random multipath baseline.
+
+    It samples route_count deterministic random simple paths using the same graph,
+    source, target, and route_count as WHISPER.
+
+    Unlike WHISPER candidate_paths(), this baseline does not intentionally seed
+    the first route with shortest_path and does not explicitly remove duplicates.
+    If a random path fails, it falls back to shortest_path to keep path_count stable.
+    """
+    graph, _whisper_result, source, target, route_count = _common_context(config, seed)
+
+    fallback = shortest_path(graph, source, target)
+    paths: List[NodePath] = []
+
+    for i in range(route_count):
+        rp = random_simple_path(
+            graph=graph,
+            source=source,
+            target=target,
+            seed=f"{seed}:random-multipath:{i}",
+        )
+
+        if rp is not None:
+            paths.append(rp)
+        elif fallback is not None:
+            paths.append(fallback)
 
     return {
-        "schema_version": "0.7.0",
+        "policy": "random_multipath",
+        "seed": seed,
+        "source": source,
+        "target": target,
+        "paths": paths,
+        "results": summarize_paths(paths),
+        "limitations": [
+            "random_multipath is a naive baseline",
+            "no adversary model",
+            "no latency model",
+            "no duplicate suppression",
+            "fallback to shortest_path if random sampling fails"
+        ],
+    }
+
+
+def compare_policies(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
+    whisper = run_simulation(config, seed)
+    single = single_path_baseline(config, seed)
+    random_multi = random_multipath_baseline(config, seed)
+
+    return {
+        "schema_version": "0.7.2",
         "experiment_id": config.get("experiment_id", "unknown"),
         "seed": seed,
         "comparison": [
@@ -65,14 +125,21 @@ def compare_whisper_vs_single_path(config: Dict[str, Any], seed: str) -> Dict[st
             },
             {
                 "policy": "single_path",
-                "path_count": baseline["results"]["path_count"],
-                "unique_path_ratio": baseline["results"]["unique_path_ratio"],
-                "path_overlap": baseline["results"]["path_overlap"],
+                "path_count": single["results"]["path_count"],
+                "unique_path_ratio": single["results"]["unique_path_ratio"],
+                "path_overlap": single["results"]["path_overlap"],
+            },
+            {
+                "policy": "random_multipath",
+                "path_count": random_multi["results"]["path_count"],
+                "unique_path_ratio": random_multi["results"]["unique_path_ratio"],
+                "path_overlap": random_multi["results"]["path_overlap"],
             },
         ],
         "limitations": [
             "baseline comparison is preliminary",
             "single_path is intentionally minimal",
+            "random_multipath is naive and non-adversarial",
             "no adversary model",
             "no statistical significance claim",
             "no security or resilience claim"
@@ -80,16 +147,27 @@ def compare_whisper_vs_single_path(config: Dict[str, Any], seed: str) -> Dict[st
     }
 
 
-def write_baseline_comparison(config_path: str, seeds: list[str], csv_path: str, json_path: str) -> None:
-    import csv
+# Backward-compatible name for existing tests / scripts.
+def compare_whisper_vs_single_path(config: Dict[str, Any], seed: str) -> Dict[str, Any]:
+    result = compare_policies(config, seed)
+    return {
+        **result,
+        "schema_version": "0.7.0",
+        "comparison": [
+            row for row in result["comparison"]
+            if row["policy"] in {"whisper_candidate_paths", "single_path"}
+        ],
+    }
 
+
+def write_baseline_comparison(config_path: str, seeds: list[str], csv_path: str, json_path: str) -> None:
     config = json.loads(Path(config_path).read_text())
 
     rows = []
     comparisons = []
 
     for seed in seeds:
-        result = compare_whisper_vs_single_path(config, seed)
+        result = compare_policies(config, seed)
         comparisons.append(result)
 
         for row in result["comparison"]:
@@ -115,7 +193,7 @@ def write_baseline_comparison(config_path: str, seeds: list[str], csv_path: str,
         writer.writerows(rows)
 
     json_out.write_text(json.dumps({
-        "schema_version": "0.7.0",
+        "schema_version": "0.7.2",
         "comparisons": comparisons,
     }, indent=2, sort_keys=True))
 

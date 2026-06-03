@@ -1,0 +1,236 @@
+{
+  "results": [
+    {
+      "compromise": {
+        "compromise_fraction": 0.2,
+        "compromised_node_count": 20,
+        "compromised_nodes": [
+          "n11",
+          "n15",
+          "n35",
+          "n39",
+          "n41",
+          "n43",
+          "n5",
+          "n52",
+          "n53",
+          "n56",
+          "n60",
+          "n70",
+          "n73",
+          "n75",
+          "n78",
+          "n80",
+          "n82",
+          "n84",
+          "n90",
+          "n99"
+        ],
+        "type": "random_node_compromise"
+      },
+      "experiment_id": "example-v050",
+      "exposure": [
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 4.0,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "whisper_candidate_paths"
+        },
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 1.0,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "single_path"
+        },
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 6.0,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "random_multipath"
+        }
+      ],
+      "limitations": [
+        "adversarial exposure is preliminary",
+        "random compromise only, not targeted",
+        "no active adversary behavior",
+        "no state-to-path mapping",
+        "no lane collapse model",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.3",
+      "seed": "run-001",
+      "topology": {
+        "edge_count": 265,
+        "node_count": 100,
+        "type": "erdos_renyi"
+      }
+    },
+    {
+      "compromise": {
+        "compromise_fraction": 0.2,
+        "compromised_node_count": 20,
+        "compromised_nodes": [
+          "n1",
+          "n16",
+          "n18",
+          "n23",
+          "n28",
+          "n29",
+          "n34",
+          "n39",
+          "n4",
+          "n48",
+          "n59",
+          "n6",
+          "n62",
+          "n64",
+          "n67",
+          "n75",
+          "n80",
+          "n81",
+          "n9",
+          "n92"
+        ],
+        "type": "random_node_compromise"
+      },
+      "experiment_id": "example-v050",
+      "exposure": [
+        {
+          "clean_path_ratio": 0.3333333333333333,
+          "compromised_path_count": 2,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 3.0,
+          "path_compromise_rate": 0.6666666666666666,
+          "path_count": 3,
+          "policy": "whisper_candidate_paths"
+        },
+        {
+          "clean_path_ratio": 1.0,
+          "compromised_path_count": 0,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 0.0,
+          "path_compromise_rate": 0.0,
+          "path_count": 3,
+          "policy": "single_path"
+        },
+        {
+          "clean_path_ratio": 1.0,
+          "compromised_path_count": 0,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 0.0,
+          "path_compromise_rate": 0.0,
+          "path_count": 3,
+          "policy": "random_multipath"
+        }
+      ],
+      "limitations": [
+        "adversarial exposure is preliminary",
+        "random compromise only, not targeted",
+        "no active adversary behavior",
+        "no state-to-path mapping",
+        "no lane collapse model",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.3",
+      "seed": "run-002",
+      "topology": {
+        "edge_count": 250,
+        "node_count": 100,
+        "type": "erdos_renyi"
+      }
+    },
+    {
+      "compromise": {
+        "compromise_fraction": 0.2,
+        "compromised_node_count": 20,
+        "compromised_nodes": [
+          "n15",
+          "n17",
+          "n19",
+          "n21",
+          "n29",
+          "n32",
+          "n42",
+          "n48",
+          "n5",
+          "n6",
+          "n61",
+          "n62",
+          "n65",
+          "n7",
+          "n71",
+          "n73",
+          "n75",
+          "n81",
+          "n83",
+          "n89"
+        ],
+        "type": "random_node_compromise"
+      },
+      "experiment_id": "example-v050",
+      "exposure": [
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 2.3333333333333335,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "whisper_candidate_paths"
+        },
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 1.0,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "single_path"
+        },
+        {
+          "clean_path_ratio": 0.0,
+          "compromised_path_count": 3,
+          "fully_compromised_count": 0,
+          "fully_compromised_path_rate": 0.0,
+          "mean_compromised_nodes_per_path": 1.0,
+          "path_compromise_rate": 1.0,
+          "path_count": 3,
+          "policy": "random_multipath"
+        }
+      ],
+      "limitations": [
+        "adversarial exposure is preliminary",
+        "random compromise only, not targeted",
+        "no active adversary behavior",
+        "no state-to-path mapping",
+        "no lane collapse model",
+        "no security or resilience claim"
+      ],
+      "schema_version": "0.7.3",
+      "seed": "run-003",
+      "topology": {
+        "edge_count": 251,
+        "node_count": 100,
+        "type": "erdos_renyi"
+      }
+    }
+  ],
+  "schema_version": "0.7.3"
+}
