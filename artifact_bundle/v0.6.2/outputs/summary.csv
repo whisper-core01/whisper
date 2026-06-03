@@ -1,0 +1,4 @@
+run_file,seed,topology,node_count,edge_count,path_count,unique_path_ratio,path_overlap
+outputs/run_001.json,run-001,erdos_renyi,100,265,3,1.0,0.2738095238095238
+outputs/run_002.json,run-002,erdos_renyi,100,250,3,1.0,0.13333333333333333
+outputs/run_003.json,run-003,erdos_renyi,100,251,3,1.0,0.1111111111111111

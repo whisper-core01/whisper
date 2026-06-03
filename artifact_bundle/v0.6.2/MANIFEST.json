@@ -1,0 +1,33 @@
+{
+  "bundle_version": "v0.6.2",
+  "project": "WHISPER Remote Nerve",
+  "purpose": "First reproducible Phase 2 simulation artifact bundle",
+  "status": "preliminary",
+  "security_claim": "none",
+  "contents": {
+    "outputs": [
+      "outputs/run_001.json",
+      "outputs/run_002.json",
+      "outputs/run_003.json",
+      "outputs/summary.csv"
+    ],
+    "schemas": [
+      "schemas/simulation_run.schema.json",
+      "schemas/metrics_report.schema.json",
+      "schemas/topology_graph.schema.json",
+      "schemas/baseline_comparison.schema.json"
+    ],
+    "experiments": [
+      "experiments/example.json"
+    ],
+    "reports": [
+      "SIMULATION_REPORT_v0.6.0.md"
+    ]
+  },
+  "limitations": [
+    "No adversary model",
+    "No baseline comparison",
+    "No state-to-path mapping",
+    "No security or resilience claim"
+  ]
+}

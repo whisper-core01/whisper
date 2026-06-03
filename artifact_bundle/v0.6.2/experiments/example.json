@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.5.0",
+  "experiment_id": "example-v050",
+  "seed": "whisper-example-seed",
+  "whisper_version": "v0.5.0",
+  "topology": {
+    "type": "erdos_renyi",
+    "node_count": 100,
+    "edge_probability": 0.05
+  },
+  "policy": {
+    "type": "whisper_structural_divergence",
+    "route_count": 3,
+    "fractal_count": 36
+  },
+  "payload": {
+    "size_bytes": 1048576,
+    "fragment_size": 1024
+  }
+}
