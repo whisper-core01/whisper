@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TopologyGraph",
+  "description": "WHISPER Phase 2 minimal topology graph format. Expanded during v0.6.",
+  "type": "object",
+  "required": ["schema_version", "topology_id", "nodes", "edges"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "topology_id": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": { "type": "object", "required": ["node_id"], "properties": { "node_id": { "type": "string" } }, "additionalProperties": true }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "type": "object", "required": ["source", "target"], "properties": { "source": { "type": "string" }, "target": { "type": "string" } }, "additionalProperties": true }
+    }
+  },
+  "additionalProperties": true
+}
