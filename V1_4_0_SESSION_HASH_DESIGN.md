@@ -419,3 +419,129 @@ No valid repair.
 
 No replay.
 
+
+---
+
+## 18. Secure Session Shutdown
+
+A WHISPER session cannot be closed directly.
+
+Before closure, WHISPER must execute a local shutdown sequence:
+
+- stop accepting new session material
+- freeze custody and repair state
+- purge the active Wasm context
+- zeroize volatile buffers
+- generate a local rotor close code
+- destroy all session-bound keys
+- mark the session hash as locally revoked
+- close the session state
+
+A session may enter shutdown when:
+
+- the user leaves the session
+- the user cancels the transfer
+- the conversation closes
+- the local policy requires closure
+- the session expires
+- the local WHISPER instance detects invalid or stale material
+
+This is not an accusation of compromise.
+
+It is local session death.
+
+---
+
+## 19. Wasm Purge
+
+Before a session is closed, the active Wasm context must be purged.
+
+This includes:
+
+- stopping session-bound Wasm execution
+- clearing transient Wasm memory
+- zeroizing session-local buffers
+- invalidating execution-local state
+- preventing new material from entering the active context
+
+A session must not remain resumable after Wasm purge.
+
+---
+
+## 20. Rotor Close Code
+
+Before destroying session keys, WHISPER generates a local rotor close code.
+
+The rotor close code is a closure seal.
+
+It is not:
+
+- a recovery key
+- a session key
+- a fragment key
+- a repair key
+- a Reticulum identity
+- a route identity
+- a payload commitment
+
+The rotor close code may prove locally that shutdown occurred.
+
+It must not contain, preserve, derive, or restore any destroyed key.
+
+Short form:
+
+The rotor close code seals the tomb.
+
+It does not resurrect the session.
+
+---
+
+## 21. Key Non-Persistence Invariant
+
+WHISPER keys are ephemeral operational material.
+
+A key exists only for a specific function, in a specific context, for a limited time.
+
+Rules:
+
+- no session key survives the session
+- no fragment key survives the fragment context
+- no repair key survives the repair round
+- no custody key survives its TTL
+- no key is reused across sessions
+- no key is reused across epochs
+- no key is retained after shutdown
+- no key is recoverable from the rotor close code
+
+A closed session has no usable keys.
+
+After session shutdown, no fragment, capsule, repair shard, custody entry, or transport hint can be validated, resumed, repaired, or decrypted under that session.
+
+Final rule:
+
+No persistent keys.
+
+No session resurrection.
+
+No replay after close.
+
+No custody after close.
+
+No repair after close.
+
+---
+
+## 22. Final Shutdown Statement
+
+The revocation kills validity.
+
+The Wasm purge kills memory.
+
+The destruction of keys kills the possibility of return.
+
+The rotor close code seals the closure.
+
+A WHISPER key is born to act.
+
+It dies when its action is complete.
+
