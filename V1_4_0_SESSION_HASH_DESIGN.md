@@ -545,3 +545,82 @@ A WHISPER key is born to act.
 
 It dies when its action is complete.
 
+
+---
+
+## 23. FLV LUKS Storage Invariant
+
+A WHISPER FLV must be stored only inside the local LUKS-protected partition.
+
+The FLV is not a portable archive.
+
+The FLV is not a transferable proof bundle.
+
+The FLV is local sealed memory.
+
+It is protected by three boundaries:
+
+- LUKS storage boundary
+- local master-key-derived FLV binding
+- machine-local context binding
+
+Copying an FLV outside the LUKS partition must not make it readable, reusable, validatable, or replayable.
+
+A valid FLV lifecycle record requires:
+
+- the correct local LUKS environment
+- the correct local master-key-derived binding hash
+- the correct local machine context
+- the correct session lifecycle seals
+
+The FLV does not die when the session closes.
+
+The session dies.
+
+The keys are destroyed.
+
+The FLV enters dormancy.
+
+When the machine shuts down, the FLV remains dormant inside LUKS.
+
+It can only be awakened by the same local machine context capable of opening the LUKS partition and deriving the correct FLV binding hash from the local master key.
+
+Short form:
+
+The session dies.
+
+The FLV sleeps.
+
+LUKS is the chamber.
+
+The local master key guards the door.
+
+---
+
+## 24. FLV Non-Portability Rule
+
+A WHISPER FLV must not be readable or validatable on another machine.
+
+An FLV copied to another device must fail because the other device cannot reproduce:
+
+- the LUKS storage context
+- the local master-key-derived binding
+- the machine-local context digest
+- the session lifecycle binding
+
+Therefore, an attacker who obtains an FLV file alone must not obtain:
+
+- session keys
+- fragment keys
+- repair keys
+- payload
+- route information
+- Reticulum identity
+- missing fragment sets
+- replay capability
+- session resurrection capability
+
+Final rule:
+
+The FLV never leaves LUKS as a usable object.
+
