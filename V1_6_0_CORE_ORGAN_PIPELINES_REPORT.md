@@ -20,7 +20,7 @@ It formalizes:
 
 Current validated state:
 
-- 489 tests passing
+- 509 tests passing
 
 ---
 
@@ -503,7 +503,7 @@ The Core organ pipeline model preserves its tested invariants under simulated sc
 
 Current suite:
 
-- 489 tests passing
+- 509 tests passing
 
 Validated v1.6.0 modules:
 
@@ -542,6 +542,71 @@ Covered scenarios:
 Core result:
 
 The organism can route material through both rails without shortcut, without unauthorized role crossing, without expanded restart privileges, and without making Lemonade a single point of failure.
+
+---
+
+## Core Session Revocation
+
+v1.6.x adds Core-side session revocation validation.
+
+File:
+
+core_session_revocation_v01.py
+
+Tests:
+
+tests/test_core_session_revocation_v01.py
+
+Purpose:
+
+Validate that a Core-revoked session cannot become active again.
+
+A revoked session is rejected through:
+
+- old session seal replay
+- new seal reactivation attempt
+- inbound retry
+- outbound retry
+- organ restart
+- Lemonade fallback
+- Daemon resend
+- close-after-revocation attempts
+
+Core rule:
+
+A session may die.
+
+It must not resurrect.
+
+Validated properties:
+
+- active session can be registered
+- active session can be revoked
+- revocation is Core-side truth
+- revocation is idempotent
+- revoked session cannot reactivate with old seal
+- revoked session cannot reactivate with new seal
+- closed session cannot reactivate
+- revoked session blocks inbound
+- revoked session blocks outbound
+- unknown session is denied
+- unknown revoked session creates a revoked record
+- organ restart does not restore revoked session
+- Lemonade fallback does not restore revoked session
+- Daemon resend does not restore revoked session
+- close after revocation is ignored
+
+Canonical invariant:
+
+A revoked Core session never becomes active again.
+
+Not through the past.
+
+Not through restart.
+
+Not through network retry.
+
+Not through immunity fallback.
 
 ## 15. Final Statement
 
