@@ -1,5 +1,58 @@
 # WHISPER Remote Nerve
 
+## Start Here
+
+WHISPER is not a messaging application.
+
+WHISPER is a cryptographic organism for sovereign digital communication.
+
+It does not only protect message content.
+
+It protects the communication container:
+
+- routing
+- rhythm
+- fragmentation
+- repair
+- session lifecycle
+- local memory
+- closure
+- dormancy
+- disappearance
+
+Recommended reading order:
+
+1. `DOCTRINE_CONTENT_VS_CONTAINER.md`  
+   Root manifesto. Explains why WHISPER protects the container, not only the content.
+
+2. `WIKI_INDEX.md`  
+   Main documentation entry point.
+
+3. `V1_3_SERIES_REPORT.md`  
+   v1.3 routing, pressure field, redundancy, custody, and adaptive reconstruction report.
+
+4. `V1_4_0_SESSION_LIFECYCLE_REPORT.md`  
+   v1.4 session lifecycle, secure shutdown, FLV dormancy, and non-reactivation report.
+
+5. `WIKI_ROTOR.md`, `WIKI_NERVE.md`, `WIKI_FLV.md`  
+   Organ-level wiki pages for lifecycle sealing, local reflexes, and dormant local memory.
+
+Current stable milestones:
+
+- `v1.3.4` — adaptive pressure routing and reconstruction
+- `v1.4.1` — session lifecycle, FLV dormancy, and non-reactivation
+
+Current validation snapshot:
+
+- 297 tests passing
+- 330 session reactivation cases
+- 1.0000 pass rate on session reactivation prevention
+- machine/LUKS-bound dormant FLV lifecycle model
+- local revocation and secure shutdown validated
+
+---
+
+
 **Status:** Experimental MVP framework  
 **Current baseline:** v0.4.3  
 **Security status:** Not a secure communication protocol  
