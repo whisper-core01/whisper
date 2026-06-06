@@ -1,5 +1,15 @@
 # WHISPER — Acknowledgements
 
+## Personal Statement
+
+Humility, respect, and work are values that have guided me throughout my life.
+
+I do not claim the bricks.
+
+I claim WHISPER: an organic architecture built with respect on foundations that existed before me.
+
+---
+
 ## Technical Humility
 
 WHISPER is built on a collective technical heritage.
