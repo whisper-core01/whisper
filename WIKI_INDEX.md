@@ -263,6 +263,50 @@ Recommended for:
 - secure shutdown review
 - FLV dormancy review
 
+---
+
+### v1.5.0 Nerve Mobile Report
+
+File:
+
+V1_5_0_NERVE_MOBILE_REPORT.md
+
+Purpose:
+
+Documents the complete v1.5.0 Nerve Mobile milestone.
+
+It covers:
+
+- Nerve Mobile admission
+- Mobile Vault boot
+- reappearance after reboot
+- Core-side revocation
+- stateless runtime
+- capabilities
+- transport
+- UI membrane
+- permissions
+- Wasm bridge boundary
+
+Key result:
+
+- 417 tests passing
+
+Core invariant:
+
+The mobile is not the brain.
+
+The mobile is a nerve.
+
+Recommended for:
+
+- mobile architecture review
+- Nerve Mobile review
+- Wasm/host boundary review
+- peripheral organ model review
+
+---
+
 ## Organ Wiki Pages
 
 ### Rotor

@@ -37,7 +37,10 @@ Recommended reading order:
 4. `V1_4_0_SESSION_LIFECYCLE_REPORT.md`  
    v1.4 session lifecycle, secure shutdown, FLV dormancy, and non-reactivation report.
 
-5. `WIKI_ROTOR.md`, `WIKI_NERVE.md`, `WIKI_FLV.md`  
+5. `V1_5_0_NERVE_MOBILE_REPORT.md`  
+   v1.5 Nerve Mobile report: admission, Vault boot, reappearance, revocation, runtime, transport, UI, permissions, and Wasm bridge.
+
+6. `WIKI_ROTOR.md`, `WIKI_NERVE.md`, `WIKI_NERVE_MOBILE.md`, `WIKI_FLV.md`  
    Organ-level wiki pages for lifecycle sealing, local reflexes, and dormant local memory.
 
 Current stable milestones:
