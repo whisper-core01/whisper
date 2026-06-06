@@ -138,16 +138,6 @@ The mobile does not identify itself.
 
 It produces a code of appearance.
 
-Validated properties:
-
-- surface seed changes with challenge
-- admission code changes with epoch
-- valid code is admitted
-- bad code is ignored
-- revoked code is rejected
-- binding commitment is local and deterministic
-- safe summaries do not expose full commitments
-
 ---
 
 ### nerve_mobile_vault_boot_v01.py
@@ -172,16 +162,6 @@ The Vault opens for birth.
 
 It closes before life.
 
-Validated properties:
-
-- Mobile Vault continuity material loads
-- admission material derives deterministically
-- admission material changes with Sol challenge
-- Rotor-style code is emitted
-- buffers are zeroized
-- revoked Vault material is rejected
-- boot sequence returns only code and capabilities
-
 ---
 
 ### nerve_mobile_reappearance_v01.py
@@ -205,15 +185,6 @@ Key rule:
 The nerve may reappear.
 
 It cannot replay its old appearance.
-
-Validated properties:
-
-- continuity preserved
-- old code rejected
-- fresh code accepted
-- revoked reappearance rejected
-- code changes after reboot challenge
-- code changes after epoch change
 
 ---
 
@@ -240,14 +211,6 @@ Key rule:
 The nerve may die.
 
 It cannot come back from the dead.
-
-Validated properties:
-
-- revoked reappearance rejected
-- non-revoked reappearance admitted
-- old code after revocation rejected
-- clone after revocation rejected
-- revoked binding rejected before code validation
 
 ---
 
@@ -285,15 +248,6 @@ The Vault opens for birth.
 It closes before life.
 
 The runtime only lets current pass.
-
-Validated properties:
-
-- runtime envelopes contain no Vault/admission identity
-- online Sol send works
-- offline status handled
-- silence handled
-- response rendering works
-- runtime invariants prevent Vault/admission after boot
 
 ---
 
@@ -338,17 +292,6 @@ It declares what it can sense.
 
 The Core decides what it wants to hear.
 
-Validated properties:
-
-- capabilities declared correctly
-- duplicate capabilities normalized
-- forbidden capabilities rejected
-- supported capabilities accepted
-- unsupported capabilities ignored
-- revoked capabilities not restored
-- capabilities do not affect admission
-- capabilities do not affect reappearance
-
 ---
 
 ### nerve_mobile_transport_v01.py
@@ -381,19 +324,6 @@ It emits.
 
 The Sol responds, or stays silent.
 
-Validated properties:
-
-- transport sends envelopes
-- transport receives responses
-- silence handled
-- offline handled
-- send errors handled
-- no connection attempts
-- no stored state
-- no admission effect
-- no continuity effect
-- no identity or secret in envelope
-
 ---
 
 ### nerve_mobile_ui_v01.py
@@ -422,18 +352,6 @@ Only three statuses exist:
 - WHISPER_SILENT
 - OFFLINE
 
-It does not show:
-
-- internal JSON
-- Sol challenges
-- admission codes
-- binding prefixes
-- revocation state
-- Vault state
-- identities
-- sessions
-- network configuration
-
 Key rule:
 
 The UI of the nerve explains nothing.
@@ -441,16 +359,6 @@ The UI of the nerve explains nothing.
 It shows what WHISPER says.
 
 It stays silent when WHISPER is silent.
-
-Validated properties:
-
-- text/image/audio/video rendering
-- status updates
-- no Vault access
-- no admission trigger
-- no stored internal state
-- no internal JSON exposure
-- no configuration surface
 
 ---
 
@@ -477,16 +385,6 @@ Key rule:
 The Nerve may ask the OS for senses.
 
 The Core decides what it wants to hear.
-
-Validated properties:
-
-- text and event available by default
-- audio requires audio_capture
-- image requires image_capture and image_gallery
-- video requires video_capture
-- denied permissions block capabilities
-- revoked permissions block capabilities
-- permissions do not affect admission, identity, Vault, or session state
 
 ---
 
@@ -529,18 +427,6 @@ The Wasm asks.
 The host filters.
 
 The Nerve never leaves its role.
-
-Validated properties:
-
-- Vault load allowed only during boot
-- Vault close allowed when open
-- runtime transition requires closed Vault
-- runtime can emit Sol impulse
-- runtime can poll Sol response
-- runtime cannot open Vault
-- forbidden calls denied
-- sensor permission request allowed only with Vault closed
-- bridge does not affect admission, identity, or Core secrets
 
 ---
 
@@ -585,16 +471,6 @@ The Mobile Vault may contain continuity artifacts.
 It keeps the scar.
 
 It does not keep the brain.
-
-Allowed Mobile Vault material:
-
-- origin_hint
-- nerve_local_material
-- birth_epoch
-- last_seen_epoch
-- revocation_marker
-- capability_profile
-- surface_commitment_version
 
 The Mobile Vault is opened only during boot/admission.
 
