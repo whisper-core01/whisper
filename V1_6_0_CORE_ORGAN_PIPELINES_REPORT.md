@@ -20,7 +20,7 @@ It formalizes:
 
 Current validated state:
 
-- 481 tests passing
+- 489 tests passing
 
 ---
 
@@ -503,7 +503,7 @@ The Core organ pipeline model preserves its tested invariants under simulated sc
 
 Current suite:
 
-- 481 tests passing
+- 489 tests passing
 
 Validated v1.6.0 modules:
 
@@ -514,7 +514,36 @@ Validated v1.6.0 modules:
 
 ---
 
-## 14. Final Statement
+---
+
+## 14. End-to-End Integration Tests
+
+v1.6.0 also includes Core pipeline end-to-end integration tests.
+
+File:
+
+tests/test_core_pipelines_e2e_v01.py
+
+Purpose:
+
+Validate that the Core organ rails work together as integrated flows, not only as isolated module units.
+
+Covered scenarios:
+
+- valid external material reaches Wasm only through the full inbound chain
+- Wasm output reaches the network only through the full outbound chain
+- rejected inbound material never produces outbound flow
+- inbound organ failure never creates shortcuts
+- Transporteur failure preserves retention and allows resend after restart
+- Lemonade failure falls back to Dôme strict local coherence
+- restarted organs preserve minimal privileges
+- inbound and outbound roles never cross
+
+Core result:
+
+The organism can route material through both rails without shortcut, without unauthorized role crossing, without expanded restart privileges, and without making Lemonade a single point of failure.
+
+## 15. Final Statement
 
 WHISPER v1.6.0 gives the Core its circulation rules.
 
