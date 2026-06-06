@@ -36,7 +36,75 @@ LUKS protects.
 
 ---
 
+## Root Manifesto
+
+### Content vs Container
+
+File:
+
+DOCTRINE_CONTENT_VS_CONTAINER.md
+
+Purpose:
+
+This is the root doctrine of WHISPER.
+
+It explains why WHISPER does not limit security to encrypted content.
+
+Core idea:
+
+Encryption protects what is said.
+
+WHISPER protects what the communication reveals before it is even read.
+
+The manifesto defines the architectural foundation for:
+
+- VoxMesh
+- Reticulum separation
+- Sol-link routing
+- pressure fields
+- fragmentation
+- decoys
+- repair
+- session lifecycle
+- Rotor
+- Nerve
+- FLV
+- LUKS-bound dormant memory
+- key non-persistence
+- anti-resurrection
+
+Short form:
+
+The content is encrypted.
+
+The container is sovereignized.
+
+Recommended for:
+
+- first-time readers
+- reviewers
+- funding bodies
+- anyone trying to understand why WHISPER is not a messaging app
+
+---
+
 ## Recommended Reading Order
+
+### 0. WHISPER Manifesto — Content vs Container
+
+File:
+
+DOCTRINE_CONTENT_VS_CONTAINER.md
+
+Purpose:
+
+The foundational manifesto of WHISPER.
+
+It defines the distinction between protecting message content and protecting the full communication container.
+
+Read this first.
+
+---
 
 ### 1. v1.3 Series Report
 
