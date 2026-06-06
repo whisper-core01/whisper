@@ -1,0 +1,13 @@
+schema_version,experiment,seed,source,target,hop_budget,policy,cascade_strength,delivered,hop_count,loop_detected,path_len,path_overlap_vs_shortest_proxy,shortest_proxy_hops
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-001,n14,n81,12,sol_anchored_hop_by_hop,0.0,False,12,False,13,0.0625,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-001,n14,n81,12,sol_anchored_hop_by_hop,1.0,False,12,True,13,0.14285714285714285,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-001,n14,n81,12,sol_anchored_hop_by_hop,2.0,False,12,True,13,0.06666666666666667,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-001,n14,n81,12,sol_anchored_hop_by_hop,4.0,False,12,False,13,0.13333333333333333,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-002,n32,n7,12,sol_anchored_hop_by_hop,0.0,False,12,False,13,0.058823529411764705,4
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-002,n32,n7,12,sol_anchored_hop_by_hop,1.0,False,12,False,13,0.125,4
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-002,n32,n7,12,sol_anchored_hop_by_hop,2.0,False,12,False,13,0.125,4
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-002,n32,n7,12,sol_anchored_hop_by_hop,4.0,False,12,False,13,0.058823529411764705,4
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-003,n2,n53,12,sol_anchored_hop_by_hop,0.0,False,12,False,13,0.0625,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-003,n2,n53,12,sol_anchored_hop_by_hop,1.0,False,12,False,13,0.13333333333333333,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-003,n2,n53,12,sol_anchored_hop_by_hop,2.0,False,12,False,13,0.0625,3
+1.3.0b,sol-anchored-hop-by-hop-cascade,run-003,n2,n53,12,sol_anchored_hop_by_hop,4.0,True,10,False,11,0.15384615384615385,3

@@ -1,0 +1,205 @@
+{
+  "experiment": "sol-anchored-hop-by-hop-cascade",
+  "results": [
+    {
+      "cascade_strengths": [
+        0.0,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "experiment": "sol-anchored-hop-by-hop-cascade",
+      "hop_budget": 12,
+      "results": [
+        {
+          "cascade_strength": 0.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.0625,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 1.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": true,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.14285714285714285,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 2.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": true,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.06666666666666667,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 4.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.13333333333333333,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        }
+      ],
+      "schema_version": "1.3.0b",
+      "seed": "run-001",
+      "shortest_proxy_path": [
+        "n14",
+        "n49",
+        "n28",
+        "n81"
+      ],
+      "source": "n14",
+      "target": "n81"
+    },
+    {
+      "cascade_strengths": [
+        0.0,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "experiment": "sol-anchored-hop-by-hop-cascade",
+      "hop_budget": 12,
+      "results": [
+        {
+          "cascade_strength": 0.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.058823529411764705,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 4
+        },
+        {
+          "cascade_strength": 1.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.125,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 4
+        },
+        {
+          "cascade_strength": 2.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.125,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 4
+        },
+        {
+          "cascade_strength": 4.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.058823529411764705,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 4
+        }
+      ],
+      "schema_version": "1.3.0b",
+      "seed": "run-002",
+      "shortest_proxy_path": [
+        "n32",
+        "n16",
+        "n36",
+        "n87",
+        "n7"
+      ],
+      "source": "n32",
+      "target": "n7"
+    },
+    {
+      "cascade_strengths": [
+        0.0,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "experiment": "sol-anchored-hop-by-hop-cascade",
+      "hop_budget": 12,
+      "results": [
+        {
+          "cascade_strength": 0.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.0625,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 1.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.13333333333333333,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 2.0,
+          "delivered": false,
+          "hop_budget": 12,
+          "hop_count": 12,
+          "loop_detected": false,
+          "path_len": 13,
+          "path_overlap_vs_shortest_proxy": 0.0625,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        },
+        {
+          "cascade_strength": 4.0,
+          "delivered": true,
+          "hop_budget": 12,
+          "hop_count": 10,
+          "loop_detected": false,
+          "path_len": 11,
+          "path_overlap_vs_shortest_proxy": 0.15384615384615385,
+          "policy": "sol_anchored_hop_by_hop",
+          "shortest_proxy_hops": 3
+        }
+      ],
+      "schema_version": "1.3.0b",
+      "seed": "run-003",
+      "shortest_proxy_path": [
+        "n2",
+        "n72",
+        "n10",
+        "n53"
+      ],
+      "source": "n2",
+      "target": "n53"
+    }
+  ],
+  "schema_version": "1.3.0b"
+}
