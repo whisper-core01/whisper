@@ -627,3 +627,38 @@ FUNDING_BRIEF.md
 Purpose:
 
 Short external-review brief for funders and reviewers.
+
+
+---
+
+### v1.6.0 Core Organ Pipelines Report
+
+File:
+
+V1_6_0_CORE_ORGAN_PIPELINES_REPORT.md
+
+Purpose:
+
+Documents the v1.6.0 Core organ circulation model.
+
+It covers:
+
+- inbound isolation
+- outbound isolation
+- upstream retention
+- downstream acknowledgements
+- Lemonade / Dôme immunity
+- Lemonade failure reflex
+- organ restart safety
+- no-shortcut invariants
+
+Key result:
+
+- 481 tests passing
+
+Core rule:
+
+The Wasm does not know the outside.
+
+It only knows what the Membrane gives it.
+

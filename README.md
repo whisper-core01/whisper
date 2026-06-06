@@ -344,3 +344,7 @@ baseline comparison
 reproducibility
 hardening
 ```
+
+
+- `V1_6_0_CORE_ORGAN_PIPELINES_REPORT.md`  
+  v1.6 Core organ pipelines report: inbound isolation, outbound isolation, upstream retention, Lemonade/Dôme immunity, and organ restart safety.
