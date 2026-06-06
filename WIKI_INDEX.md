@@ -223,6 +223,46 @@ Recommended for:
 
 ---
 
+---
+
+### 5. v1.4.0 Session Lifecycle Report
+
+File:
+
+V1_4_0_SESSION_LIFECYCLE_REPORT.md
+
+Purpose:
+
+Documents the complete v1.4.0 session lifecycle milestone.
+
+It covers:
+
+- session start seal
+- session hash validity boundary
+- local revocation
+- rotor close code
+- secure shutdown
+- key destruction
+- machine/LUKS-bound dormant FLV
+- session reactivation prevention
+
+Key result:
+
+- 297 tests passing
+- 330 session reactivation cases
+- 1.0000 pass rate
+
+Core invariant:
+
+An old session may leave local traces, but it must never become active again.
+
+Recommended for:
+
+- lifecycle review
+- anti-reactivation review
+- secure shutdown review
+- FLV dormancy review
+
 ## Organ Wiki Pages
 
 ### Rotor
