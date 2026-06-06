@@ -364,3 +364,154 @@ The FLV remembers.
 
 The Nerve transmits.
 
+
+---
+
+## 14. Final Nerve Mobile Model
+
+Nerve Mobile has continuity, but that continuity is not carried by the app itself.
+
+Continuity is carried by a local Mobile Vault.
+
+The Mobile Vault contains only revocable continuity artifacts.
+
+It must never contain sovereign WHISPER secrets.
+
+---
+
+## 15. Mobile Vault Continuity
+
+The Mobile Vault may contain:
+
+- origin_hint
+- nerve_local_material
+- nerve_birth_epoch
+- last_seen_epoch
+- capability_profile
+- revocation_marker
+- surface_commitment_version
+
+The Mobile Vault must not contain:
+
+- Core master key
+- Core Vault
+- session keys
+- fragment keys
+- repair keys
+- payload
+- route
+- FLV master binding
+- Core Reticulum identity
+- sovereign WHISPER secrets
+
+Short form:
+
+The Mobile Vault keeps the scar.
+
+The Core keeps the truth.
+
+---
+
+## 16. Wasm and Vault Boot Sequence
+
+Nerve Mobile runs inside a Wasm runtime.
+
+At boot/admission time:
+
+- the Wasm runtime starts
+- the Mobile Vault is opened
+- origin_hint, nerve_local_material, and continuity artifacts are read
+- the Mobile Vault is closed immediately
+- Vault read buffers are zeroized
+- Sol challenge material is received
+- admission material is derived
+- Nerve continues in stateless mode
+
+The Mobile Vault must not remain open during normal use.
+
+The Wasm runtime must not retain Vault material after admission derivation.
+
+Short form:
+
+The Vault opens for birth.
+
+It closes before life.
+
+---
+
+## 17. Final Appearance Derivation
+
+The mobile never identifies itself.
+
+It produces a code of appearance.
+
+Conceptual derivation:
+
+surface_seed =
+  H(
+    local_surface,
+    sol_admission_challenge,
+    boot_nonce,
+    admission_epoch,
+    "NERVE_MOBILE_SURFACE_SEED_V1"
+  )
+
+nerve_admission_code =
+  RotorMachine(
+    surface_seed,
+    origin_hint
+  ).emit_code(
+    mode = "nerve_admission",
+    epoch = admission_epoch
+  )
+
+The admission code is:
+
+- bounded
+- non-portable
+- non-reusable
+- revocable
+- not a key
+- not an identity
+- not a persistent token
+
+---
+
+## 18. Final Role Separation
+
+Mobile Vault:
+  keeps the scar.
+
+Core / FLV / LUKS:
+  keeps the truth.
+
+Sol:
+  challenges.
+
+Rotor:
+  transforms appearance material.
+
+Nerve:
+  answers.
+
+Core:
+  admits, ignores, or revokes.
+
+---
+
+## 19. Wasm/Vault Nerve Mobile Invariant
+
+A Nerve Mobile may read a local Vault only during the boot/admission phase.
+
+The Vault is opened briefly, used to load revocable continuity artifacts, and closed immediately.
+
+Vault material must be zeroized after deriving admission material.
+
+During normal operation, Nerve Mobile runs without an open Vault and without persistent WHISPER secrets in memory.
+
+Final rule:
+
+The Mobile Vault recognizes the nerve.
+
+It never carries the brain.
+
