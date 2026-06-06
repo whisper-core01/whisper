@@ -624,3 +624,26 @@ Final rule:
 
 The FLV never leaves LUKS as a usable object.
 
+
+---
+
+## 25. Session Non-Reactivation Invariant
+
+An old session may leave local traces, but it must never become active again.
+
+Fragments, capsules, lifecycle seals, rotor close codes, session start seals, and dormant FLV records may remain as local evidence.
+
+However, none of them can reopen, resume, repair, decrypt, or validate material under a closed session.
+
+A closed WHISPER session is not recoverable.
+
+A dormant FLV is memory, not life.
+
+A rotor close code is a seal, not a key.
+
+A session start seal proves that a session was born, but it cannot give birth to it again.
+
+Final rule:
+
+Closed sessions leave evidence, not life.
+
