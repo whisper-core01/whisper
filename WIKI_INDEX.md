@@ -327,6 +327,54 @@ Nerve senses.
 
 ---
 
+---
+
+### Nerve Mobile
+
+File:
+
+WIKI_NERVE_MOBILE.md
+
+Role:
+
+Nerve Mobile is the stateless mobile peripheral nerve of WHISPER.
+
+It is not a client.
+
+It is not a trusted device.
+
+It is not a mobile Vault.
+
+It does not connect like a conventional application.
+
+It appears in the Sol.
+
+The Sol challenges.
+
+The Core admits or ignores.
+
+The FLV remembers the local binding.
+
+Nerve Mobile provides:
+
+- no mobile-side Whisper secrets
+- no account
+- no login
+- no QR-code requirement
+- no persistent token
+- Sol challenge-based appearance
+- Rotor-derived admission code
+- Core-side revocable nerve binding
+- FLV/LUKS-bound binding commitments
+- reboot and revocation behavior
+
+Short form:
+
+The mobile does not connect.
+
+The mobile appears.
+
+
 ### FLV
 
 File:
