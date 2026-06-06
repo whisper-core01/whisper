@@ -40,6 +40,24 @@ These foundations were created, refined, tested, challenged, and maintained by p
 
 Without their work, WHISPER would not exist.
 
+## A Boundary, Not a Formality
+
+This acknowledgement is not a formality.
+
+It is a boundary.
+
+WHISPER is built with respect for prior work, and it explicitly refuses to appropriate the foundations created by others.
+
+The purpose of this document is to make that boundary clear.
+
+WHISPER depends on the work of people who came before it.
+
+It acknowledges that work.
+
+It does not claim it.
+
+---
+
 ## What WHISPER Claims
 
 WHISPER claims only its own architecture:
