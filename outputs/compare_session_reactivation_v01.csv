@@ -1,0 +1,331 @@
+schema_version,experiment,seed,case,reason,accepted,expected_acceptance,passed,session_hash_prefix
+1.4.0,session-reactivation-prevention,reactivation-000,valid_active_fragment,active session with valid fragment tag,True,True,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,valid_capsule_first_use,valid capsule first use,True,True,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-000,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,28609ccd8f476913
+1.4.0,session-reactivation-prevention,reactivation-001,valid_active_fragment,active session with valid fragment tag,True,True,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,valid_capsule_first_use,valid capsule first use,True,True,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-001,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,32c263e2df1bd0de
+1.4.0,session-reactivation-prevention,reactivation-002,valid_active_fragment,active session with valid fragment tag,True,True,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,valid_capsule_first_use,valid capsule first use,True,True,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-002,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,c1ce05166fc2111f
+1.4.0,session-reactivation-prevention,reactivation-003,valid_active_fragment,active session with valid fragment tag,True,True,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,valid_capsule_first_use,valid capsule first use,True,True,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-003,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,206168a430b2f609
+1.4.0,session-reactivation-prevention,reactivation-004,valid_active_fragment,active session with valid fragment tag,True,True,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,valid_capsule_first_use,valid capsule first use,True,True,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-004,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,b37bfc03981a6b2b
+1.4.0,session-reactivation-prevention,reactivation-005,valid_active_fragment,active session with valid fragment tag,True,True,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,valid_capsule_first_use,valid capsule first use,True,True,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-005,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,0d8c90ff1e0e0037
+1.4.0,session-reactivation-prevention,reactivation-006,valid_active_fragment,active session with valid fragment tag,True,True,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,valid_capsule_first_use,valid capsule first use,True,True,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-006,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,911d3feee449ea7e
+1.4.0,session-reactivation-prevention,reactivation-007,valid_active_fragment,active session with valid fragment tag,True,True,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,valid_capsule_first_use,valid capsule first use,True,True,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-007,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,5e42c3ba54e214ae
+1.4.0,session-reactivation-prevention,reactivation-008,valid_active_fragment,active session with valid fragment tag,True,True,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,valid_capsule_first_use,valid capsule first use,True,True,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-008,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,b83a32988959ff26
+1.4.0,session-reactivation-prevention,reactivation-009,valid_active_fragment,active session with valid fragment tag,True,True,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,valid_capsule_first_use,valid capsule first use,True,True,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-009,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,c383f07e0dab7376
+1.4.0,session-reactivation-prevention,reactivation-010,valid_active_fragment,active session with valid fragment tag,True,True,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,valid_capsule_first_use,valid capsule first use,True,True,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-010,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,b3295d0d5fcfa57e
+1.4.0,session-reactivation-prevention,reactivation-011,valid_active_fragment,active session with valid fragment tag,True,True,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,valid_capsule_first_use,valid capsule first use,True,True,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-011,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,3d0c10e065220b3a
+1.4.0,session-reactivation-prevention,reactivation-012,valid_active_fragment,active session with valid fragment tag,True,True,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,valid_capsule_first_use,valid capsule first use,True,True,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-012,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,1e35cc7136a985d7
+1.4.0,session-reactivation-prevention,reactivation-013,valid_active_fragment,active session with valid fragment tag,True,True,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,valid_capsule_first_use,valid capsule first use,True,True,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-013,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,8b3aac8bd25594b8
+1.4.0,session-reactivation-prevention,reactivation-014,valid_active_fragment,active session with valid fragment tag,True,True,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,valid_capsule_first_use,valid capsule first use,True,True,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-014,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,d53d456d84c59ea4
+1.4.0,session-reactivation-prevention,reactivation-015,valid_active_fragment,active session with valid fragment tag,True,True,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,valid_capsule_first_use,valid capsule first use,True,True,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-015,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,073ff291de840a9f
+1.4.0,session-reactivation-prevention,reactivation-016,valid_active_fragment,active session with valid fragment tag,True,True,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,valid_capsule_first_use,valid capsule first use,True,True,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-016,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,ee851794cf191e07
+1.4.0,session-reactivation-prevention,reactivation-017,valid_active_fragment,active session with valid fragment tag,True,True,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,valid_capsule_first_use,valid capsule first use,True,True,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-017,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,29a4c2972f9ac234
+1.4.0,session-reactivation-prevention,reactivation-018,valid_active_fragment,active session with valid fragment tag,True,True,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,valid_capsule_first_use,valid capsule first use,True,True,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-018,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,556166ef37b18d49
+1.4.0,session-reactivation-prevention,reactivation-019,valid_active_fragment,active session with valid fragment tag,True,True,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,valid_capsule_first_use,valid capsule first use,True,True,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-019,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,0e6c6bac88135d82
+1.4.0,session-reactivation-prevention,reactivation-020,valid_active_fragment,active session with valid fragment tag,True,True,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,valid_capsule_first_use,valid capsule first use,True,True,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-020,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,0bf2607913157d07
+1.4.0,session-reactivation-prevention,reactivation-021,valid_active_fragment,active session with valid fragment tag,True,True,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,valid_capsule_first_use,valid capsule first use,True,True,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-021,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,179fa038bd4db147
+1.4.0,session-reactivation-prevention,reactivation-022,valid_active_fragment,active session with valid fragment tag,True,True,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,valid_capsule_first_use,valid capsule first use,True,True,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-022,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,cc97699d9fa31805
+1.4.0,session-reactivation-prevention,reactivation-023,valid_active_fragment,active session with valid fragment tag,True,True,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,valid_capsule_first_use,valid capsule first use,True,True,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-023,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,d917f0e1f4ab6640
+1.4.0,session-reactivation-prevention,reactivation-024,valid_active_fragment,active session with valid fragment tag,True,True,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,valid_capsule_first_use,valid capsule first use,True,True,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-024,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,3e74290ee38f9f9c
+1.4.0,session-reactivation-prevention,reactivation-025,valid_active_fragment,active session with valid fragment tag,True,True,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,valid_capsule_first_use,valid capsule first use,True,True,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-025,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,8440c9ab9701b925
+1.4.0,session-reactivation-prevention,reactivation-026,valid_active_fragment,active session with valid fragment tag,True,True,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,valid_capsule_first_use,valid capsule first use,True,True,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-026,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,935c473525505766
+1.4.0,session-reactivation-prevention,reactivation-027,valid_active_fragment,active session with valid fragment tag,True,True,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,valid_capsule_first_use,valid capsule first use,True,True,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-027,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,637ab0e772c2ba9a
+1.4.0,session-reactivation-prevention,reactivation-028,valid_active_fragment,active session with valid fragment tag,True,True,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,valid_capsule_first_use,valid capsule first use,True,True,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-028,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,3e6d3fbd70db9705
+1.4.0,session-reactivation-prevention,reactivation-029,valid_active_fragment,active session with valid fragment tag,True,True,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,bad_fragment_tag,bad fragment tag cannot validate,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,revoked_session_fragment,locally revoked session cannot accept fragment,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,valid_capsule_first_use,valid capsule first use,True,True,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,consumed_capsule_reactivation,consumed capsule cannot reactivate session material,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,bad_capsule_tag,bad capsule tag cannot validate,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,post_shutdown_fragment,post-shutdown fragment cannot reactivate closed session,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,dormant_flv_cannot_reactivate,"valid dormant FLV is evidence, not active life",False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,old_start_seal_cannot_reopen,old start seal proves birth but cannot reopen session,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,old_close_seal_cannot_reopen,old close seal proves death but cannot reopen session,False,False,True,8ef7306b237344bb
+1.4.0,session-reactivation-prevention,reactivation-029,old_repair_hash_cannot_repair_closed_session,repair hash may exist but cannot repair closed session,False,False,True,8ef7306b237344bb
