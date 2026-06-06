@@ -524,3 +524,14 @@ The session dies.
 
 The keys never return.
 
+
+
+## Funding Brief
+
+File:
+
+FUNDING_BRIEF.md
+
+Purpose:
+
+Short external-review brief for funders and reviewers.

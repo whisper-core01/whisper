@@ -22,6 +22,9 @@ It protects the communication container:
 
 Recommended reading order:
 
+0. `FUNDING_BRIEF.md`  
+   Short external-review brief for funders and reviewers.
+
 1. `DOCTRINE_CONTENT_VS_CONTAINER.md`  
    Root manifesto. Explains why WHISPER protects the container, not only the content.
 
