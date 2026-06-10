@@ -182,4 +182,81 @@ mod tests {
         mce.etat.mettre_a_jour_mode(mce.bal_in.taille());
         assert_eq!(mce.etat.mode, crate::mce::types::ModeMCE::Sature);
     }
+    
+    #[test]
+fn sup_inv_03_mce_output_fragments_do_not_expose_forbidden_material() {
+    use bincode;
+    use crate::mce::bal::{PaquetBAL, TypePayload};
+
+    let cle_maitre = [0x42u8; 32];
+    let seed_entropie = [0x01u8; 32];
+
+    let secret_message = b"SUP_INV_03_SECRET_MESSAGE_MUST_NOT_LEAK".repeat(32);
+    let forbidden_file_name = "forbidden_secret_filename.txt";
+
+    let mut mce = MCE::nouveau(cle_maitre, seed_entropie);
+
+    let paquet = PaquetBAL::nouveau(TypePayload::Fichier {
+        nom: forbidden_file_name.to_string(),
+        contenu: secret_message.clone(),
+    });
+
+    mce.bal_in.deposer(paquet);
+
+    assert!(mce.cycle());
+
+    let out = mce.bal_out.lire().expect("BAL_OUT must contain one PaquetOUT");
+
+    assert!(out.n_fragments > 0);
+    assert_eq!(out.fragments.len(), out.n_fragments as usize);
+
+    let mut serialized_output = Vec::new();
+
+    for fragment_scelle in &out.fragments {
+        let bytes = bincode::serialize(fragment_scelle)
+            .expect("FragmentScelle must serialize");
+        serialized_output.extend_from_slice(&bytes);
+    }
+
+    // 1. Le message complet ne doit pas apparaître dans la sortie scellée.
+    assert!(
+        !serialized_output
+            .windows(secret_message.len())
+            .any(|w| w == secret_message.as_slice()),
+        "sealed MCE output must not expose full plaintext message"
+    );
+
+    // 2. Une signature claire évidente du message ne doit pas apparaître.
+    let marker = b"SUP_INV_03_SECRET_MESSAGE_MUST_NOT_LEAK";
+    assert!(
+        !serialized_output
+            .windows(marker.len())
+            .any(|w| w == marker),
+        "sealed MCE output must not expose plaintext marker"
+    );
+
+    // 3. Le nom de fichier ne doit pas sortir.
+    assert!(
+        !serialized_output
+            .windows(forbidden_file_name.as_bytes().len())
+            .any(|w| w == forbidden_file_name.as_bytes()),
+        "sealed MCE output must not expose original filename"
+    );
+
+    // 4. La clé maître ne doit pas sortir.
+    assert!(
+        !serialized_output
+            .windows(cle_maitre.len())
+            .any(|w| w == cle_maitre),
+        "sealed MCE output must not expose master key material"
+    );
+
+    // 5. Le seed entropique ne doit pas sortir.
+    assert!(
+        !serialized_output
+            .windows(seed_entropie.len())
+            .any(|w| w == seed_entropie),
+        "sealed MCE output must not expose entropy seed material"
+    );
+}
 }
